@@ -1,0 +1,15 @@
+<h3>If Else in Angular</h3>
+
+@if(display){
+  <div >This is a div</div>
+}
+<button (click) = "show()">Show</button>
+<button (click) = "hide()">Hide</button>
+
+<hr>
+<button (click) = "toggle()">{{toggleStatus ? 'Show Orange' : 'Show Gray'}}</button>
+@if(toggleStatus){
+  <div style="width: 200px; height: 200px; background-color: gray;"></div>
+} @else{
+  <div style="width: 200px; height: 200px; background-color: orange;"></div>
+}
