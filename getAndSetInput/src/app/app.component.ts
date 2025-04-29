@@ -19,4 +19,16 @@ export class AppComponent {
   setInputValue(value:string){
     this.name = value
   }
+
+  email:any = ''
+
+  getEmail(val:string){
+    console.log(val)
+  }
+
+  displayEmail(val:string){
+    this.email = val
+    console.log(val)
+  }
+
 }

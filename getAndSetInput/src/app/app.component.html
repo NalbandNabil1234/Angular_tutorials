@@ -3,3 +3,9 @@
 <input type="text" (input) = "getInputValue($event)" placeholder="Enter your Name" #inputBox>
 <h3>{{name}}</h3>
 <button (click) = "setInputValue(inputBox.value)">Click</button>
+
+<hr>
+<input type="email" name="" id=""placeholder="Enter your Email" #emailBox>
+<button (click) = "getEmail(emailBox.value)">Get Email</button>
+<button (click) = "displayEmail(emailBox.value)">Display Email</button>
+<h3>{{email}}</h3>
