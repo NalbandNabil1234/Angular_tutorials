@@ -1,0 +1,21 @@
+Day 1: (28/04/25)
+
+1) setup environment for angular
+2) learned how to create basic angular webapp in that i have used ng new <project name>
+3) learned what is interpolation
+4) viewed the folder structure of the angular project
+5) also used ng serve to run the project
+6) used ng generate component <name of component> to generate the component (short command is ng g c <name>)
+7) also learned what component is and how to create it and use it in different other components
+8) learned how to create custom components
+9) created a simple function which will print button clicked when the button is clicked
+10) learned how datatypes are defined for props and variables in typescript
+11) created a counter app
+
+Day 2: (29/04/25)
+
+1) in morning i was having a session with Sameer sir in that session i have learned what kind of projects they have developed and also others things about the company 
+2) after that he performed some sql commands and give me the overall view of the production environment like how things actually worked this was a 2 - 2.5 hours session
+3) after lunch again he give me session where we have displayed data from 3 tables and join them altogether
+4) after that i started learning angular in which i have learned about Events like : click event, input event, mouse enter event, mouse leave event, focus event and blur event
+5) also learned how to get and set input field value
