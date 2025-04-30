@@ -5,7 +5,8 @@
 }
 
 
-@for(detail of studdetails; track detail){
+@for(detail of studdetails; track detail; let id = $index){
+  <h3>{{id+1}}</h3>
   <h3>{{detail.name}}</h3>
   <h3>{{detail.age}}</h3>
   <h3>{{detail.address}}</h3>
