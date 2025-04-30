@@ -1,0 +1,23 @@
+<h3>Else If Condition | Control Flow Statement</h3>
+
+<button (click) = "changeColor(1)">blue</button>
+<button (click) = "changeColor(2)">Green</button>
+<button (click) = "changeColor(3)">Yellow</button>
+<button (click) = "changeColor(4)">gray</button>
+
+<input type="text" (input) = "displayColorOnValueChange($event)" placeholder="Enter Color Number">
+
+@if(color == 1){
+<div style="background-color: blue; width: 50px; height: 50px;"></div>
+} @else if(color == 2){
+
+  <div style="background-color: green; width: 50px; height: 50px;"></div>
+} @else if(color == 3){
+
+  <div style="background-color: yellow; width: 50px; height: 50px;"></div>
+} @else if(color == 4){
+  <div style="background-color: gray; width: 50px; height: 50px;"></div>
+} @else{
+    <div style="background-color: black; width: 50px; height: 50px;"></div>
+  }
+
