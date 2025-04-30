@@ -1,0 +1,25 @@
+<h3>Switch Case | Conditional Statement</h3>
+
+<button (click) = "colorChangeOnClicks('blue')">Blue</button>
+<button (click) = "colorChangeOnClicks('red')">Red</button>
+<button (click) = "colorChangeOnClicks('yellow')">Yellow</button>
+<button (click) = "colorChangeOnClicks('green')">Green</button>
+
+@switch(color){
+  @case('blue'){
+    <h4 style="background-color: blue;">This is Blue</h4>
+  }
+  @case('red'){
+    <h4 style="background-color: red;">This is Red</h4>
+  }
+  @case('yellow'){
+    <h4 style="background-color: yellow;">This is Yellow</h4>
+  }
+  @case('green'){
+    <h4 style="background-color: green;">This is Green</h4>
+  } @default{
+    <h4>Please Click Button</h4>
+  }
+}
+
+<input type="text" (input) = "handleColorBasedOnText($event)" placeholder="Enter Color">
