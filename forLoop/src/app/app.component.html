@@ -1,0 +1,13 @@
+<h3>For Loop</h3>
+
+@for(name of names; track name){
+  <h3>{{name}}</h3>
+}
+
+
+@for(detail of studdetails; track detail){
+  <h3>{{detail.name}}</h3>
+  <h3>{{detail.age}}</h3>
+  <h3>{{detail.address}}</h3>
+  <button (click) = "showName(detail.name)">Click</button>
+}
