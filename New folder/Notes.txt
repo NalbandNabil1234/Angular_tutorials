@@ -21,3 +21,11 @@ Day 2: (29/04/25)
 5) also learned how to get and set input field value and also learned what is template reference
 6) learned what are different styles options available while working with angular
 7) learned how to use if else in angular and created a toggle button showing text and hiding it on click
+
+Day 3: (30/04/25)
+
+1) in morning i was having a 2.5 hours session in which Sameer sir shows the actual working of school project and also the bugs in it
+2) after lunch started with conditional statement else if and created color changer on button clicks and also based on color number entered in input text box
+3) after that i learned how to use switch conditional statement
+4) after that learned how to use for loop in that learned how to use track and index
+5) after that i have learned about signal in angular, whats the difference between a normal property, how to update it using set and why signal are actually introduced in angular the answer is for optimization 
