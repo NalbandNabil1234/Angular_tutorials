@@ -10,7 +10,7 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
   styleUrl: './catalog.component.css'
 })
 export class CatalogComponent {
-  products: IProduct[] | any;
+  products: IProduct[] | any
   filter:string = ''
   constructor(){
     this.products = [
