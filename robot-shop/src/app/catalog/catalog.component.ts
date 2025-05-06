@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IProduct } from './IProducts.component';
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 @Component({
   selector: 'app-catalog',
-  imports: [CommonModule],
+  imports: [CommonModule, ProductDetailComponent],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })

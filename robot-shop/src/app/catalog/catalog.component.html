@@ -1,38 +1,15 @@
 <div class="container">
-    <div class="filters">
-      <a class="button" (click) = "filter = 'Heads'">Heads</a>
-      <a class="button" (click) = "filter = 'Arms'">Arms</a>
-      <a class="button" (click) = "filter = 'Torsos'">Torsos</a>
-      <a class="button" (click) = "filter = 'Bases'">Bases</a>
-      <a class="button" (click) = "filter = ''">All</a>
-    </div>
-  
-    <ul class="products">
-      <li class="product-item" *ngFor="let product of showFilteredProducts()">
-        <div class="products aligningDiv">
-          <div class="product-details">
-            <!-- interpolation -->
-            <!-- <img src="{{'/images/robot-parts/' + product.imageName}}" alt=""> -->
-
-            <!-- attribute binding use [] -->
-            <img [src]="'/images/robot-parts/' + product?.imageName" alt="">
-            <div class="product-info">
-              <div class="name">{{product?.name}}</div>
-              <div class="description">{{product?.description}}</div>
-              <div class="category">Part Type: {{product?.category}}</div>
-            </div>
-          </div>
-          <div class="price">
-            <!-- <div [class.strikeThrough]="product.discount > 0" >{{product?.price | currency:"INR"}}</div> -->
-             <!-- style binding -->
-            <!-- <div [style.color] = "product.discount > 0 ? 'red' : ''" [ngClass]="{'strikeThrough': product.discount>0, 'bold': product.discount>0}" >{{product?.price | currency:"INR"}}</div> -->
-
-            <!-- ngStyle directive -->
-            <div [ngStyle] = "{'color': product.discount > 0 ? 'red' : 'green', 'font-size': product.discount > 0 ? '11px' : ''}" [ngClass]="{'strikeThrough': product.discount>0, 'bold': product.discount>0}" >{{product?.price | currency:"INR"}}</div>
-            <div class="discountCss" *ngIf = "product.discount > 0">{{(product?.price * (1-product?.discount)) | currency:"INR"}}</div>
-            <button class="cta">Buy</button>
-          </div>
-        </div>
-      </li>
-    </ul>
+  <div class="filters">
+    <a class="button" (click) = "filter = 'Heads'">Heads</a>
+    <a class="button" (click) = "filter = 'Arms'">Arms</a>
+    <a class="button" (click) = "filter = 'Torsos'">Torsos</a>
+    <a class="button" (click) = "filter = 'Bases'">Bases</a>
+    <a class="button" (click) = "filter = ''">All</a>
   </div>
+
+  <ul class="products">
+    <li class="product-item" *ngFor="let product of showFilteredProducts()">
+      <app-product-detail [product] = "product"></app-product-detail>
+    </li>
+  </ul>
+</div>
