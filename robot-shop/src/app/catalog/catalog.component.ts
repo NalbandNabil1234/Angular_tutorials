@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IProduct } from './IProducts.component';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
+import { CartServiceService } from '../cart-service.service';
 
 @Component({
   selector: 'app-catalog',
@@ -12,8 +13,11 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
 export class CatalogComponent {
   products: IProduct[] | any
   filter:string = ''
-  cart: string[] = []
-  constructor(){
+  // first way to use the service
+  // private cartSvc:CartServiceService =inject(CartServiceService) 
+
+  // 2nd way is to directly injecting it in class constructor
+  constructor(private cartSvc: CartServiceService){
     this.products = [
       {
         id: 1,
@@ -192,15 +196,21 @@ export class CatalogComponent {
     ]
 
   }
+  
   showFilteredProducts(){
     return this.filter === '' ? this.products : this.products.filter((product?:any) => product?.category === this.filter)
 
   }
 
   addToCart(product:IProduct){
-    // console.log(`${product.name} added to Cart`)
-    this.cart.push(product.name)
-    console.log(this.cart)
+    this.cartSvc.add(product)
+
+    // displaying logic are written here
+    console.log(`${this.cartSvc.cart} added to Cart`)
+    console.log(`total price is : ${this.cartSvc.total}`)
+
+    // written just for converting the products details
+    // console.log(JSON.stringify(this.products))
   }
 
 }
