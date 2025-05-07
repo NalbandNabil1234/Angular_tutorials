@@ -22,6 +22,6 @@
             currency:"INR"}}</div>
         <div class="discountCss" *ngIf="product?.discount > 0">{{(product.price * (1-product?.discount)) |
             currency:"INR"}}</div>
-        <button class="cta">Buy</button>
+        <button class="cta" (click) = "buyBtnClicked(product)">Buy</button>
     </div>
 </div>

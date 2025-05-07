@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IProduct } from '../catalog/IProducts.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,4 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductDetailComponent {
  @Input() product!: IProduct
+ @Output() buy = new EventEmitter()
+ 
+ buyBtnClicked(product:IProduct){
+  // console.log(`${product.name} added to cart successfully`);
+  this.buy.emit()
+ }
 }

@@ -12,6 +12,7 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
 export class CatalogComponent {
   products: IProduct[] | any
   filter:string = ''
+  cart: string[] = []
   constructor(){
     this.products = [
       {
@@ -195,4 +196,11 @@ export class CatalogComponent {
     return this.filter === '' ? this.products : this.products.filter((product?:any) => product?.category === this.filter)
 
   }
+
+  addToCart(product:IProduct){
+    // console.log(`${product.name} added to Cart`)
+    this.cart.push(product.name)
+    console.log(this.cart)
+  }
+
 }
