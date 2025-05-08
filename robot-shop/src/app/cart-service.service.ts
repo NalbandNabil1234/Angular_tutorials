@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from './catalog/IProducts.component';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class CartServiceService {
   cart: string[] = []
+  
   prices:number[] = []
   total:number = 0
-  constructor() {
+  constructor(private pushData: HttpClient) {
     
    }
 
@@ -15,6 +17,9 @@ export class CartServiceService {
     // 
     // console.log(`${product.name} added to Cart`)
     this.cart.push(product.name)
+    this.pushData.post('http://localhost:3000/cart', product).subscribe(() => {
+      console.log('product added')
+    })
 
     if(product.discount > 0){
     this.prices.push(Number(((product.price) * (1-product.discount)).toFixed(2)))
@@ -26,5 +31,6 @@ export class CartServiceService {
       return prevVal + currVal
     }, 0)
 
+    console.log(this.cart)
   }
 }
