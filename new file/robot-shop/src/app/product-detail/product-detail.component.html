@@ -1,0 +1,27 @@
+<div class="products aligningDiv">
+    <div class="product-details">
+        <!-- interpolation -->
+        <!-- <img src="{{'/images/robot-parts/' + product.imageName}}" alt=""> -->
+
+        <!-- attribute binding use [] -->
+        <img [src]="'/images/robot-parts/' + product.imageName" alt="">
+        <div class="product-info">
+            <div class="name">{{product.name}}</div>
+            <div class="description">{{product.description}}</div>
+            <div class="category">Part Type: {{product.category}}</div>
+        </div>
+    </div>
+    <div class="price">
+        <!-- <div [class.strikeThrough]="product.discount > 0" >{{product?.price | currency:"INR"}}</div> -->
+        <!-- style binding -->
+        <!-- <div [style.color] = "product.discount > 0 ? 'red' : ''" [ngClass]="{'strikeThrough': product.discount>0, 'bold': product.discount>0}" >{{product?.price | currency:"INR"}}</div> -->
+
+        <!-- ngStyle directive -->
+        <div [ngStyle]="{'color': product.discount > 0 ? 'red' : 'green', 'font-size': product.discount > 0 ? '11px' : ''}"
+            [ngClass]="{'strikeThrough': product.discount>0, 'bold': product.discount>0}">{{product.price |
+            currency:"INR"}}</div>
+        <div class="discountCss" *ngIf="product.discount > 0">{{(product.price * (1-product.discount)) |
+            currency:"INR"}}</div>
+        <button class="cta" (click) = "buyBtnClicked(product)">Buy</button>
+    </div>
+</div>

@@ -29,3 +29,50 @@ Day 3: (30/04/25)
 3) after that i learned how to use switch conditional statement
 4) after that learned how to use for loop in that learned how to use track and index
 5) after that i have learned about signal in angular, whats the difference between a normal property, how to update it using set and why signal are actually introduced in angular the answer is for optimization 
+
+Day 4 : (01/05/25)
+
+1) in morning i have learned writtable signals methods like (set and update)
+2) after that learned datatypes of signals and types of signals (writtable, computed)
+3) after that learned how effect is used to capture signals in that i got to know what is constructor function and how to use effect in that
+4) started watching another tutorials which manager sir told me to do
+
+Day 5 : (05/05/25)
+
+1) watched all the overview 
+2) started with the fundamentals 
+3) created the home page ui of robot shop
+
+Day 6 : (06/05/25)
+
+1)started with the catalog page
+2)leared what is ngfor directive type of structural directives used for adding multiple elements in the dom
+3)created multiple category items using ng for
+4)learned about click event and created filtering functionality using click and filter property
+5)also learned how to handle error due to null values using safe navigation operator (?)
+6)also learned *ngIf structural directives to hide and show the discount price and actual price of the robots parts based on the conditions and also learned about [hidden] to do the same
+7)also learned how to use built in currency pipes in order to show the currency type
+8)styling options with angular
+9)learned how to use ngclass directives to apply multiple class when thier condition becomes true
+10)learned about class binding to apply the class based on condition
+11)i have also learned how communicate with the child component using inputs like we can use the child component as an html element in the parent template and in that we can pass the data in it and in the child component we have to use @Input() directive in order to use the data passed from the parent component and finally using it in the template file
+
+
+Day 7 : (07/05/25)
+
+1)in the morning i have started learning @Output directives which is used for allowing parent component to use the data or event of the child component in short it is used for sending data or event from the child component to parent component but with this we have to use EventEmitter to make it act as a event and in the parent component we have to use that property or event of child inside the () binding
+2) after that learned how to create a service using ng generate service <name of the service> and also learned how to use that service inside other components by taking any property name with that the name of the service inside constructor and the other way is using inject outside the constructor function
+3)also learned about how to seperate business logic and the displaying logic for business logic always use a service file and keep displaying logic inside the component
+4) learned how to create a json server by using npm install json-server and also installed dependencies using npm install and after that created a file name db.json and then added some json code and after that run the server using npx json-server db.json
+Note : is the api server is what we actally use and if yes then how to store the data in that
+5) by mistakenly i deleted some of the dependencies which causes errors in the code
+
+Day 8 : (08/05/25)
+
+1) in the morning i tried to solve those errors which was occured yesterday and finally after some tries i solved the errors
+2) after that started learning about what is observables
+3) after that stored all the product details inside the db.json file inside the json server which i created yesterday
+4) after that leanered how to use the get request using observables and httpclient service and finally get all the data by calling the api(here i got stuck for more than one hour because i was trying the method which is shown in tutorials but after that i asked tohid bhai for help and he told me not to use that method and finally he showed me other way and finally i got the concept ) (Note: First, start the json-server. Then, use HttpClient in your Angular service to make HTTP GET requests. Use an Observable to fetch data, and configure your app to provide HttpClient using provideHttpClient() in app.config.ts. and then subscribe the observable method inside the ngoninit method )
+5) by this i have also learned about the lifecycle hook ngOnInit() which gets first executed when the angular create the component and injected the dependencies
+6) also used post method to send the data inside the json for that i first used HttpClient service because of that i was able to create the property which is using the HttpClient service by that i used that property and the post method in which i have given the url and then the data which i want to post in my case added those products which
+ user has clicked the button buy and that i push in the json server but for that i need to subscribe it then only it will get executed
