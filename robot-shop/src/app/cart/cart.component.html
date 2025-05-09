@@ -1,0 +1,21 @@
+<div class="component">
+    <h2 class="heading">Your Cart</h2>
+
+    <ul>
+        <li class="purchased-item" *ngFor="let product of detailsOfProducts">
+          <div class="items">
+            <div>
+              <img [src]="'/images/robot-parts/' + product.imageName" alt="">
+            </div>
+            <div>
+              <h3>{{ product.name }}</h3>
+            </div>
+            <div>
+              <h3>{{ product.price }}</h3>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="total">total is : {{cartService.total}}</div>
+      
+</div>

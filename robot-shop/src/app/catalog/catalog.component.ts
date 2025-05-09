@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IProduct } from './IProducts.component';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
-import { CartServiceService } from '../cart-service.service';
+import { CartServiceService } from '../cart/cart-service.service'
 import { ProductService } from './product.service';
 
 @Component({
@@ -40,6 +40,7 @@ export class CatalogComponent {
     console.log(`${this.cartSvc.cart} added to Cart`)
     console.log(`total price is : ${this.cartSvc.total}`)
 
+    
     // written just for converting the products details
     // console.log(JSON.stringify(this.products))
   }

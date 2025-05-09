@@ -1,0 +1,19 @@
+/* .component{
+
+} */
+
+.heading{
+    text-align: center;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+li{
+    list-style: none;
+}
+
+.items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

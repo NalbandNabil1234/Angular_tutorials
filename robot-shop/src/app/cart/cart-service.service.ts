@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { IProduct } from './catalog/IProducts.component';
+import { IProduct } from '../catalog/IProducts.component';
 import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class CartServiceService {
   cart: string[] = []
-  
+  detailsOfPurchasedProduct: IProduct[] = []
   prices:number[] = []
   total:number = 0
   constructor(private pushData: HttpClient) {
@@ -26,11 +26,17 @@ export class CartServiceService {
     } else{
     this.prices.push(product.price)
     }
+    this.detailsOfPurchasedProduct.push(product)
+    // console.log(this.detailsOfPurchasedProduct)
+
+    this.calculateTotal()
   
+  }
+
+  calculateTotal(){
     this.total = this.prices.reduce((prevVal, currVal) => {
       return prevVal + currVal
     }, 0)
-
-    console.log(this.cart)
+    // console.log(this.cart)
   }
 }
