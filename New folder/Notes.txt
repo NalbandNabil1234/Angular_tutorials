@@ -76,3 +76,20 @@ Day 8 : (08/05/25)
 5) by this i have also learned about the lifecycle hook ngOnInit() which gets first executed when the angular create the component and injected the dependencies
 6) also used post method to send the data inside the json for that i first used HttpClient service because of that i was able to create the property which is using the HttpClient service by that i used that property and the post method in which i have given the url and then the data which i want to post in my case added those products which
  user has clicked the button buy and that i push in the json server but for that i need to subscribe it then only it will get executed
+
+Day 9 : (09/05/25)
+
+
+
+Day 10 : (12/05/25)
+
+1) in the morning solved all issues regarding the get and post methods.
+2) created a cart component to display the items that the user wants to buy 
+3) also applied the reduce method in order to show the total price of the items
+4) started watching routing
+5) tried to apply it but because of the version issue cant be able to do that but given my 100% to solve but nothing happened 
+6) after that asked tohid bhai for help and then he helped me and finally it is solved
+7) also I learned that redirectTo is used to redirect routing to a specified path. To make the redirection work correctly, we also need to specify pathMatch as either 'full' or 'prefix'
+8) also used routerLink directive to navigate to a specific component when an anchor tag is clicked.
+9) also learned about the Router, it is a service in Angular that is used to navigate to a specified path programmatically, such as when a button is clicked.
+10) also tried defining and accessing parameters but having some issues regarding that will try tommorow to solve it or else will ask tohid bhai

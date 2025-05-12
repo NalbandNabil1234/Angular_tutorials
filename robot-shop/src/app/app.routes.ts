@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 export const routes: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'catalog', component: CatalogComponent},
+      // {path: 'catalog/:filter', component: CatalogComponent},
       {path: 'cart', component: CartComponent},
       {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];

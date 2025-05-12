@@ -4,7 +4,7 @@ import { IProduct } from './IProducts.component';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 import { CartServiceService } from '../cart/cart-service.service'
 import { ProductService } from './product.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-catalog',
@@ -19,13 +19,14 @@ export class CatalogComponent {
   // private cartSvc:CartServiceService =inject(CartServiceService) 
 
   // 2nd way is to directly injecting it in class constructor
-  constructor(private cartSvc: CartServiceService, private productService: ProductService, private router: Router) {
+  constructor(private cartSvc: CartServiceService, private productService: ProductService, private router: Router, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
       this.products = products
+      // this.filter = this.route.snapshot.params['filter']
     })
   }
 
