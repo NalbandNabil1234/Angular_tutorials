@@ -217,6 +217,42 @@
       "category": "Heads",
       "price": 1255.5,
       "discount": 0
+    },
+    {
+      "id": 1,
+      "description": "A robot head with an unusually large eye and teloscpic neck -- excellent for exploring high spaces.",
+      "name": "Large Cyclops",
+      "imageName": "head-big-eye.png",
+      "category": "Heads",
+      "price": 1220.5,
+      "discount": 0.2
+    },
+    {
+      "id": 3,
+      "description": "A large three-eyed head with a shredder for a mouth -- great for crushing light medals or shredding documents.",
+      "name": "Shredder",
+      "imageName": "head-shredder.png",
+      "category": "Heads",
+      "price": 1275.5,
+      "discount": 0
+    },
+    {
+      "id": 17,
+      "description": "A spring base - great for reaching high places.",
+      "name": "Spring Base",
+      "imageName": "base-spring.png",
+      "category": "Bases",
+      "price": 1190.5,
+      "discount": 0
+    },
+    {
+      "id": 11,
+      "description": "A torso that can bend slightly at the waist and equiped with a heat guage.",
+      "name": "Flexible Gauged Torso",
+      "imageName": "torso-flexible-gauged.png",
+      "category": "Torsos",
+      "price": 1575,
+      "discount": 0
     }
   ]
 }

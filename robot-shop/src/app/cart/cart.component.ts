@@ -24,7 +24,8 @@ export class CartComponent {
     this.cartService.getProd().subscribe((products) => {
       this.detailsOfProducts = products
       this.prices = this.detailsOfProducts.map((product) => {
-      return product.discount > 0 ? Number(((product.price) * (1 - product.discount)).toFixed(2)) : product.price
+      return product.discount > 0 ? Number(((product.price) * (1 - product.discount))): product.price
+      
     })
     this.calculateTotal()
     })
