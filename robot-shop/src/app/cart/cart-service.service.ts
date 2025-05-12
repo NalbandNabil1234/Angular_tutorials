@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from '../catalog/IProducts.component';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +10,7 @@ export class CartServiceService {
   detailsOfPurchasedProduct: IProduct[] = []
   prices:number[] = []
   total:number = 0
-  constructor(private pushData: HttpClient) {
+  constructor(private pushData: HttpClient, private getProducts: HttpClient) {
     
    }
 
@@ -21,22 +22,11 @@ export class CartServiceService {
       console.log('product added')
     })
 
-    if(product.discount > 0){
-    this.prices.push(Number(((product.price) * (1-product.discount)).toFixed(2)))
-    } else{
-    this.prices.push(product.price)
-    }
-    this.detailsOfPurchasedProduct.push(product)
-    // console.log(this.detailsOfPurchasedProduct)
-
-    this.calculateTotal()
-  
+    this.getProd()
   }
 
-  calculateTotal(){
-    this.total = this.prices.reduce((prevVal, currVal) => {
-      return prevVal + currVal
-    }, 0)
-    // console.log(this.cart)
+  getProd():Observable<IProduct[]>{
+    return this.getProducts.get<IProduct[]>('http://localhost:3000/cart')
   }
+
 }

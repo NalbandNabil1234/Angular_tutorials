@@ -1,21 +1,29 @@
 <div class="component">
-    <h2 class="heading">Your Cart</h2>
-
+    <h2 class="cart">Your Cart</h2>
+    <div class="headings">
+      <h3>Image</h3>
+      <h3>Name</h3>
+      <h3>Price</h3>
+    </div>
     <ul>
         <li class="purchased-item" *ngFor="let product of detailsOfProducts">
           <div class="items">
             <div>
-              <img [src]="'/images/robot-parts/' + product.imageName" alt="">
+              <img class="img" [src]="'/images/robot-parts/' + product.imageName" alt="">
             </div>
             <div>
-              <h3>{{ product.name }}</h3>
+              <h3 class="name">{{ product.name }}</h3>
             </div>
             <div>
-              <h3>{{ product.price }}</h3>
+              <h3 class="price">{{product.discount > 0 ? ((product.price) * (1-product.discount)).toFixed(2): product.price }}</h3>
             </div>
           </div>
         </li>
       </ul>
-      <div class="total">total is : {{cartService.total}}</div>
+      <div class="total">
+        <h3></h3>
+        <h3>Total Price is :</h3>
+        <h3>{{total}}</h3>
+      </div>
       
 </div>

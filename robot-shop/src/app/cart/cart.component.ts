@@ -10,13 +10,32 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cart.component.css'
 })
 export class CartComponent {
-  detailsOfProducts : IProduct[] = []
-  constructor(public cartService: CartServiceService){
-    
+  detailsOfProducts: IProduct[] = []
+  prices: number[] = []
+  total: number = 0
+
+  constructor(public cartService: CartServiceService) {
+
   }
 
-  ngOnInit(){
-    this.detailsOfProducts = this.cartService.detailsOfPurchasedProduct
+
+  ngOnInit() {
+    // this.detailsOfProducts = this.cartService.detailsOfPurchasedProduct
+    this.cartService.getProd().subscribe((products) => {
+      this.detailsOfProducts = products
+      this.prices = this.detailsOfProducts.map((product) => {
+      return product.discount > 0 ? Number(((product.price) * (1 - product.discount)).toFixed(2)) : product.price
+    })
+    this.calculateTotal()
+    })
+
+    
+    
+
   }
-  
+
+  calculateTotal(){
+    this.total = this.prices.reduce((prevVal, nextVal)=> prevVal + nextVal, 0)
+  }
+
 }
