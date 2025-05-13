@@ -1,0 +1,15 @@
+<div class="container">
+    <form class="form" (ngSubmit)="onLogin()">
+        <img class="logo" src="/images/logo.png" />
+        <div class="sign-in">Sign In</div>
+        <div class="sub-text">to acquire awesome bots</div>
+        <input [(ngModel)] = "email" name="email" placeholder="Email Address" type="text" />
+        <input [(ngModel)] = "password" name="password" placeholder="Password" type="password" />
+        <div class="buttons">
+            <button  type="submit" class="button cta">
+                Sign In
+            </button>
+        </div>
+        <h3>{{msg}}</h3>
+    </form>
+</div>
