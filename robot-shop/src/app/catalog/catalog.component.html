@@ -10,10 +10,10 @@
 
     <!-- another way is using queryParams to send the parameters to the url -->
      
-    <a class="button" routerLink="/catalog" [queryParams] = "{filter: 'Arms'}">Arms</a>
-    <a class="button" routerLink="/catalog" [queryParams] = "{filter: 'Torsos'}">Torsos</a>
-    <a class="button" routerLink="/catalog" [queryParams] = "{filter: 'Bases'}">Bases</a>
-    <a class="button" routerLink="/catalog" [queryParams] = "{filter: ''}">All</a>
+    <a class="button" routerLink="/catalog" routerLinkActive="active" [queryParams] = "{filter: 'Arms'}">Arms</a>
+    <a class="button" routerLink="/catalog" routerLinkActive="active" [queryParams] = "{filter: 'Torsos'}">Torsos</a>
+    <a class="button" routerLink="/catalog" routerLinkActive="active" [queryParams] = "{filter: 'Bases'}">Bases</a>
+    <a class="button" routerLink="/catalog" routerLinkActive="active" [queryParams] = "{filter: ''}">All</a>
 
   </div>
 

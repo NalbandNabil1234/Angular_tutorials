@@ -4,11 +4,11 @@ import { IProduct } from './IProducts.component';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 import { CartServiceService } from '../cart/cart-service.service'
 import { ProductService } from './product.service';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-catalog',
-  imports: [CommonModule, ProductDetailComponent, RouterLink],
+  imports: [CommonModule, ProductDetailComponent, RouterLink, RouterLinkActive],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })
