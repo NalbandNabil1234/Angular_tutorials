@@ -25,6 +25,10 @@
     display: flex;
     position: relative;
   }
+
+  /* a.active{
+    background: gray;
+  } */
   
   .cartCount {
     position: absolute;

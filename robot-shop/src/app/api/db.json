@@ -253,6 +253,24 @@
       "category": "Torsos",
       "price": 1575,
       "discount": 0
+    },
+    {
+      "id": 4,
+      "description": "A simple single-eyed head -- simple and inexpensive.",
+      "name": "Small Cyclops",
+      "imageName": "head-single-eye.png",
+      "category": "Heads",
+      "price": 750,
+      "discount": 0
+    },
+    {
+      "id": 13,
+      "description": "A simple torso with a pouch for carrying items.",
+      "name": "Pouch Torso",
+      "imageName": "torso-pouch.png",
+      "category": "Torsos",
+      "price": 785,
+      "discount": 0
     }
   ]
 }

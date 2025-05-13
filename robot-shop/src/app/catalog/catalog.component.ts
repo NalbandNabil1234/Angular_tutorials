@@ -4,11 +4,11 @@ import { IProduct } from './IProducts.component';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 import { CartServiceService } from '../cart/cart-service.service'
 import { ProductService } from './product.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-catalog',
-  imports: [CommonModule, ProductDetailComponent],
+  imports: [CommonModule, ProductDetailComponent, RouterLink],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })
@@ -26,13 +26,27 @@ export class CatalogComponent {
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
       this.products = products
-      // this.filter = this.route.snapshot.params['filter']
+
+      // this activated route .snanpshot .params is one way to access the params from the url but the only issue is that it params is an observalble so it is now only done using subscribe because the snapshot is only used when we dont want to change more than one param in a component  
+      // this.filter = this.route.snapshot.params['filter'] ?? ''
+
+      // here comes the params.subscribe which can be used when there is changes in the params in a single component 
+      // subscribe method (this is for accessing the path params)
+      // this.route.params.subscribe((params) => {
+      //   this.filter = params['filter'] ?? ''
+      // })
+
+
+      // subscribe method (this is for accessing the  queryParams)
+      this.route.queryParams.subscribe((params) => {
+        this.filter = params['filter'] ?? ''
+      })
+
     })
   }
 
   showFilteredProducts() {
     return this.filter === '' ? this.products : this.products.filter((product?: any) => product?.category === this.filter)
-
   }
 
   addToCart(product: IProduct) {
