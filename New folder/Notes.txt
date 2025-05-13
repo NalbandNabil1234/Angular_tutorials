@@ -79,6 +79,9 @@ Day 8 : (08/05/25)
 
 Day 9 : (09/05/25)
 
+1) in morning sameer sir called me in his office and we were watching all of the issues i mean the changes in the ui they want from riyaz bhai
+2) after that started with the tutorials 
+3) after lunch again we were tracking what changes to be done in the ui
 
 
 Day 10 : (12/05/25)
@@ -93,3 +96,13 @@ Day 10 : (12/05/25)
 8) also used routerLink directive to navigate to a specific component when an anchor tag is clicked.
 9) also learned about the Router, it is a service in Angular that is used to navigate to a specified path programmatically, such as when a button is clicked.
 10) also tried defining and accessing parameters but having some issues regarding that will try tommorow to solve it or else will ask tohid bhai
+
+Day 11 : (13/05/25)
+
+1) revised yesterday's concept 
+2) learned how to use ActivatedRoute in order to access the params from the url so that we can use it in our display logic to display data based on the params given and how we use it but this us done using that activated route with the .param.subscribe() in our case 
+3) there are two ways to access the params one is using snapshot and the other is using subscribe now here comes the use cases , whenever there is one params in a single component which is not going to change at that time use snapshot(for static) else use subscribe(for dynamic))
+4) also learned how to send the parms to url there are two ways one is directly giving the :filter inside the path (called path parameter), and the another is queryParams property which we have to use it in the template file where we have used routerLink
+5) also learned how to used routerLinkActive directive in order to apply some styling when the button or some tags route is active
+6) also learned how to use [(ngModel)] for two way binding of data and also tried a small check whether the data is actually binded or not
+7) written a small function for validating user to login using hardcoded value
