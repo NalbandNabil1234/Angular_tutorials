@@ -107,6 +107,7 @@
     font-family: Arial, Helvetica, sans-serif;
     background-color: #d25ca1;
     color: #ddd;
+    margin-top: 20px;
   }
   
   button.cta:hover {

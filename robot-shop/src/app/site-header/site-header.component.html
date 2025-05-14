@@ -7,15 +7,15 @@
       <a routerLink="/cart" routerLinkActive="active">Cart</a>
     </div>
   </div>
-  <div class="right">
+  <div class="right" *ngIf="authService.signIn">
     <a routerLink="/sign-in" routerLinkActive="active">Sign In</a>
     <a href="" class="cta">Register</a>
   </div>
-  <!-- <div class="right">
-      <div>
+  <div *ngIf="!authService.signIn">
+    <div class="right profilediv">
       <img src="/images/profile.png" alt="User" />
-      <div class="sign-out">
-        <button>Sign Out</button>
+      <div class="">
+        <button (click)="onSignOut()">Sign Out</button>
       </div>
-    </div> -->
-</div>
+    </div>
+  </div>

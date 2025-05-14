@@ -54,6 +54,10 @@
     align-items: center;
     margin-right: 25px;
   }
+
+  .profilediv{
+    margin-top: 10px;
+  }
   
   .right * {
     margin-left: 25px;

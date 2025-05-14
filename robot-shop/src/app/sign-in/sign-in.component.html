@@ -6,10 +6,10 @@
         <input [(ngModel)] = "email" name="email" placeholder="Email Address" type="text" />
         <input [(ngModel)] = "password" name="password" placeholder="Password" type="password" />
         <div class="buttons">
-            <button  type="submit" class="button cta">
+            <button type="submit" class="button cta">
                 Sign In
             </button>
         </div>
-        <h3>{{msg}}</h3>
+        <h3 class="signInError">{{msg}}</h3>
     </form>
 </div>
