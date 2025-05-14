@@ -30,6 +30,9 @@
   color: #555;
 }
 
+.required{
+  color: red;
+}
 
 .sub-text {
   font-size: 18px;

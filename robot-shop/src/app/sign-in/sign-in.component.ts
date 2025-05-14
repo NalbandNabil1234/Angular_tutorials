@@ -1,13 +1,13 @@
-import { Component, output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from './auth.service';
-// import { NgModel } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, NgIf],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })
@@ -25,7 +25,7 @@ onLogin(){
   const auth = this.auth.authenticate(this.email, this.password)
   if(auth){
     this.msg = 'successfully logged in'
-    this.router.navigate(['/catalog'])
+    this.router.navigate(['/home'])
     this.auth.onSignIn()
   } else{
     this.msg = 'login failed'

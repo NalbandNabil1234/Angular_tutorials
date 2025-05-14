@@ -181,6 +181,15 @@
       "category": "Heads",
       "price": 1220.5,
       "discount": 0.2
+    },
+    {
+      "id": 6,
+      "description": "An articulated arm with a claw -- great for reaching around corners or working in tight spaces.",
+      "name": "Articulated Arm",
+      "imageName": "arm-articulated-claw.png",
+      "category": "Arms",
+      "price": 275,
+      "discount": 0
     }
   ]
 }
