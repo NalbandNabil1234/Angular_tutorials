@@ -7,9 +7,10 @@
 
         <div class="sub-text">to acquire awesome bots</div>
 
-        <input #emailField="ngModel" required [(ngModel)]="email" name="email" placeholder="Email Address" type="text" />
+        <input #emailField="ngModel" required email [(ngModel)]="email" name="email" placeholder="Email Address" type="text" />
 
-        <em class="required" *ngIf="emailField.invalid && emailField.touched">email is required</em>
+        <em class="required" *ngIf="emailField.errors?.['required'] && emailField.touched">Email is required</em>
+        <em class="required" *ngIf="emailField.errors?.['email'] && emailField.touched">Must be a valid Email</em>
 
         <input #passwordField="ngModel" required [(ngModel)]="password" name="password" placeholder="Password" type="password" />
 

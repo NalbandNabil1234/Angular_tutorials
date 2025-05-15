@@ -190,6 +190,33 @@
       "category": "Arms",
       "price": 275,
       "discount": 0
+    },
+    {
+      "id": 16,
+      "description": "A single-wheeled base with an accelerometer capable of higher speeds and navigating rougher terrain than the two-wheeled variety.",
+      "name": "Single Wheeled Base",
+      "imageName": "base-single-wheel.png",
+      "category": "Bases",
+      "price": 1190.5,
+      "discount": 0.1
+    },
+    {
+      "id": 7,
+      "description": "An arm with two independent claws -- great when you need an extra hand. Need four hands? Equip your bot with two of these arms.",
+      "name": "Two Clawed Arm",
+      "imageName": "arm-dual-claw.png",
+      "category": "Arms",
+      "price": 285,
+      "discount": 0
+    },
+    {
+      "id": 15,
+      "description": "A rocket base capable of high speed, controlled flight.",
+      "name": "Rocket Base",
+      "imageName": "base-rocket.png",
+      "category": "Bases",
+      "price": 1520.5,
+      "discount": 0
     }
   ]
 }
