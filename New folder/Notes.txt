@@ -106,3 +106,30 @@ Day 11 : (13/05/25)
 5) also learned how to used routerLinkActive directive in order to apply some styling when the button or some tags route is active
 6) also learned how to use [(ngModel)] for two way binding of data and also tried a small check whether the data is actually binded or not
 7) written a small function for validating user to login using hardcoded value
+
+Day 12 : (14/05/25)
+
+1) continued with the login component in which added submit functionality using ngSubmit directive, it allows you to bind to the submit event of the form in angular 
+2) created a service for the signin component which will validate user based on the harcoded value which i have given it as an array of object
+3) successfully injected the service where the business logic was written into the signin component and written the display logic in it
+4) also learned how to use a template variable
+5) learned about the template driven form and used it in the login component like [(ngModel)], #form="ngForm", #email="ngModel" and the control properties like valid, touched
+6) revised the input and output decorators
+
+Day 13 : (15/05/25)
+
+1) worked with different angular built-in validators such as required for the input (it is used for ensuring that there is non empty values) and also about the email validator which is used for ensuring whether the email is having a perfect syntax or not and also there are others minLength, maxlenght, min, max, requiredTrue(used with checkboxes)
+2) used email and required validator in signin form
+3) explored form controls and data types (by using ngModel in the input field angular automatically creates form control for that input field)
+4) explored what module actually is - it is a container which contains different components, services, custom pipes, and routing
+5) a module is a container which keeps the related components, services, its routings and custom pipes which is used for managing applications in organized way
+6) also gone through what is routing module and how it is used to define and manage the route of the application
+7) also watched what is feature module and how it is created using cli and how to import similar components inside it and then used this module inside the appmodule which is the route module of the application
+8) started with the intermidiate part and in that learned diff btn template driven form and reactive form and now diving into the reactive forms
+9) imported ReactiveFormsModule in the contact app inorder to use its features
+10) imported and created formcontrol instances for all 4 input tags for controling and tracking the data of form input tags 
+11) also wired-up the input with the components class using formControl directive it support two way data binding althrough its not same as the template driven form but yes its supports like by using formControl directive to bind the data from the class of component to the template and the input events to bind data from template to the component class 
+12) also used input events to bind data from the template to the class of the component
+13) i have go though the magic of controlvalueaccessor which is executed behind the scene when we use reactive form module, when we use the formControl directive and then the we write the text in the input the flow is from class to the template so what happen behind the scene is the text is written the the class property and then behimd the scene the writevalue gets executed and then the data is set in the template and when we use the input event at that time the flow is from the template to the class so here the onchange is executed behind the scene and then the value is updated in the class
+
+Day 14 : (16/05/25) Leave
