@@ -133,3 +133,15 @@ Day 13 : (15/05/25)
 13) i have go though the magic of controlvalueaccessor which is executed behind the scene when we use reactive form module, when we use the formControl directive and then the we write the text in the input the flow is from class to the template so what happen behind the scene is the text is written the the class property and then behimd the scene the writevalue gets executed and then the data is set in the template and when we use the input event at that time the flow is from the template to the class so here the onchange is executed behind the scene and then the value is updated in the class
 
 Day 14 : (16/05/25) Leave
+
+Day 15 : (19/05/25)
+
+1) i have gone through the in memory contact service of the project where understood how to create a fake restful api using angular InMemoryDbService which is used to create an fake api using createDb method to use it in the code
+2) provided the default value to the input field while editing it using the http get and linking it with the input fields
+3) learned how to use formgrou, it is like a container which holds multiple formcontrols for better control over the form) 
+4) learned how to submit a reactive form using ngSubmit and then the name of the function but for using it you must add type of the button to submit
+5) created save functionality and edit functionality
+6) created nested FormGroups for grouping multiple form controls of same type like for address we use formgroup where there are multiple form control like city, code and all
+7) learned what form builder is and how to use it (it is a servive which is used with reactive forms in order to simplify the form creation by reducing the messy code)
+8) learned when to use setValue and when to use patchValue method in reactive forms setValue is having a strict rule like if you want to set only a few property then it will throw error but when we want to setvalue for some formcontrol then we can use patchValue it doesnt have strict rules (key concept learned is setValue and patchValue if used for radio buttons or options and if we fetch api and there if suppose the gender is male then it will get automatically default selected radio to male because of the setValue or the patchValue method we dont need to apply manual checks in template
+
